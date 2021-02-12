@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Vue Js - HelloWorld App</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+
+
+
+</head>
+
+<body>
+  <!-- <div id="app" class="max-w-xl mx-auto my-10 space-y-3">
+    <h1 class="text-xl">Todo List</h1>
+    <ul>
+      <li v-for="(task,index) in tasks" :class="{done: task.done, late: task.isLate }">
+      <!-- <li v-for="(task,index) in tasks" :class="done late"></li> -->
+  <!-- {{task.title}} 
+        <button v-on:click="toggleDone(index)" class="bg-green-500 text-white  py-1 px-2 rounded">
+          Done
+        </button>
+      </li>
+    </ul>
+  </div> -->
+
+  <div id="app" class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 h-full  max-w-2xl mx-auto my-10 ">
+
+
+
+
+    <h1 class="text-4xl text-center">gallery ( {{countLike}} )</h1>
+
+    <div v-for="(task,index) in tasks" class="items-center">
+      <div class="gallery rounded">
+
+
+        <span v-show="task.done" class="text-indigo-500 ">
+          Choose MeMe
+        </span>
+        <span v-show="task.done" :class="{done: task.done}" class="material-icons color-white">
+          favorite
+        </span>
+        <button v-on:click="toggleDone(index)" class="bg-green-500 ">
+          <img v-bind:src="task.image" class="h-44 w-36">
+          {{task.title}}
+
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- my main.js -->
+  <script src="./main9.js"></script>
+</body>
+
+</html>
